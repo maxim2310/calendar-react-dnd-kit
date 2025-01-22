@@ -24,7 +24,7 @@ import {
 import { createPortal } from 'react-dom';
 import DraggableTask from './DraggableTask';
 import { ItemTypes } from '../models/ItemTypesEnum';
-import { apiService } from '../utils/ApiService';
+import { apiService } from '../services/ApiService';
 import { PublicHoliday } from '../models/PublicHoliday';
 import CalendarHeader from './CalendarHeader';
 import { CalendarMode } from '../models/ModeEnum';
