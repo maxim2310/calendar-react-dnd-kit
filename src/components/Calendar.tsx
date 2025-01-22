@@ -110,8 +110,6 @@ export default function Calendar() {
   };
 
   const handleEditTask = (taskId: string, newText: string) => {
-    console.log(newText);
-
     setTasks((prevTasks) => {
       return prevTasks.map((task) => {
         if (task.id === taskId) {
@@ -191,7 +189,6 @@ export default function Calendar() {
   const filterTasksDebounce = useCallback(
     debounce((value: string) => {
       const result = filterTasks(tasks, value);
-      console.log(result);
 
       setFilteredTasks(result);
     }, 300),
@@ -199,8 +196,6 @@ export default function Calendar() {
   );
 
   const handleInputChange = (value: string) => {
-    console.log(value);
-
     setFilterValue(value);
     filterTasksDebounce(value);
   };
